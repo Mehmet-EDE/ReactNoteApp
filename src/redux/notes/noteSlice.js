@@ -15,7 +15,7 @@ export const notesSlice = createSlice({
         },
         searchNote: (state, action) => {
             debugger
-            state.search.push(action.payload)
+            state.search = action.payload
         }
     }
 })

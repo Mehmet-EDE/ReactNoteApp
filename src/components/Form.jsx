@@ -23,11 +23,13 @@ function Form() {
     setColor(e.target.style.backgroundColor)
   }
   const searchNotes = (e) => {
-    search = notesVar.filter((item) => {
-      return Object.keys(item).some((key) =>
+    // if (e.target.value !== "") {
+
+      search = notesVar.filter((item) => {
+        return Object.keys(item).some((key) =>
         item[key].toString().toLowerCase().includes(e.target.value.toLocaleLowerCase()))
-    })
-    dispatch(searchNote(search))
+      })
+      dispatch(searchNote(search))
     debugger
   }
   return (
